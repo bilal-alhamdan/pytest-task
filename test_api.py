@@ -3,7 +3,6 @@ from unittest.mock import patch, Mock
 from requests.exceptions import HTTPError
 from api_functions import get_post_by_id, get_posts_by_user_id, get_post_by_id_with_validation
 
-# 1️⃣ Test: get_post_by_id
 @patch('api_functions.http_get')
 def test_get_post_by_id_success(mock_get):
     mock_response = Mock()
@@ -22,7 +21,6 @@ def test_get_post_by_id_http_error(mock_get):
     result = get_post_by_id(999)
     assert result is None
 
-# 2️⃣ Test: get_posts_by_user_id
 @patch('api_functions.http_get')
 def test_get_posts_by_user_id_success(mock_get):
     mock_response = Mock()
@@ -41,7 +39,6 @@ def test_get_posts_by_user_id_http_error(mock_get):
     result = get_posts_by_user_id(999)
     assert result is None
 
-# 3️⃣ Test: get_post_by_id_with_validation
 @patch('api_functions.http_get')
 def test_get_post_by_id_with_validation_success(mock_get):
     mock_response = Mock()
