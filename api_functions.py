@@ -1,4 +1,5 @@
 from typing import Any
+
 from requests import get as http_get
 from requests.exceptions import HTTPError
 
